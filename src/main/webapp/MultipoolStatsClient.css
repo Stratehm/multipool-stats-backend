@@ -1,0 +1,143 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.whiteBackground {
+	background-color: white;
+}
+
+.textCenter {
+	text-align: center;
+}
+
+.paidoutGrid {
+	margin-top: 5px;
+}
+
+.keyValuesTable {
+	text-align: left;
+}
+
+td[class ^='label'] {
+	text-align: right;
+	font-weight: bold;
+}
+
+td.warningLabel {
+	padding-top: 10px;
+	vertical-align: top;
+	text-align: right;
+	font-weight: bold;
+}
+
+td.warningValue {
+	padding-top: 10px;
+	vertical-align: top;
+	text-align: left;
+}
+
+div.warningValue {
+	height: 80px;
+	overflow-y: auto;
+	word-wrap: normal; 
+}
+
+ul.warningList {
+	list-style: disc outside none;
+	margin-left: 20px;
+}
+
+ul.warningList li {
+	margin-bottom: 5px;
+}
+
+td[class ^='value'] {
+	text-align: left;
+	padding-left: 15px;
+}
+
+td.coinLabel {
+	padding-top: 10px;
+	vertical-align: top;
+	text-align: right;
+	font-weight: bold;
+}
+
+td.coinValue {
+	padding-top: 10px;
+	vertical-align: top;
+	text-align: left;
+}
+
+td.coinValue div {
+	height: 50px;
+	overflow-y: auto;
+	word-wrap: normal; 
+}
+
+ul.miningCoinList {
+	list-style: disc outside none;
+	margin-left: 30px;
+}
+
+.refreshLabel {
+	font-size: 0.8em;
+	margin-right: 5px;
+}
+
+.donationLabel {
+	margin: 5px;
+}
+
+.donationProgressLabel {
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.donationProgressBar {
+	margin: 5px;
+}
+
+.donationTable {
+	
+}
+
+.donationDate {
+	text-align: left;
+	font-size: 1em;
+}
+
+.donationValue {
+	text-align: right;
+	font-weight: bold;
+	padding-left: 10px;
+	font-size: 1em;
+}
+
+.contactAnchor {
+	margin: 5px;
+}
+
+.twitterButton {
+	margin-top: 2px;
+	margin-right: 5px;
+}
+
+.poolSelectionContentPanel {
+	margin-top: 5px;
+}
+
+input.poolComboBox {
+	height: 21px;
+}
+
+.officialAnchor {
+	font-size: 0.8em;
+	margin-right: 5px;
+}
+
+.notification {
+	background-color: white;
+}

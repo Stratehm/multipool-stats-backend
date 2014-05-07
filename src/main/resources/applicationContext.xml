@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd 
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd">
+
+	<!-- Allows bean declaration as Annotation -->
+	<context:component-scan base-package="strat.mining.multipool.stats" />
+
+	<!-- Allows bean injection as Annotation -->
+	<context:annotation-config />
+
+	<!-- Load properties -->
+	<!-- <context:property-placeholder location="classpath:application.properties" 
+		/> -->
+
+	<!-- Scheduling -->
+	<task:scheduler id="scheduler" pool-size="20" />
+	<task:executor id="executor" pool-size="20" />
+	<task:annotation-driven scheduler="scheduler"
+		executor="executor" />
+	
+	<bean name="currencyTickersExecutorService" class="java.util.concurrent.Executors" factory-method="newCachedThreadPool" />
+
+</beans>

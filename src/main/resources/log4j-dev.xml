@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-8p [%t]:%C - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="file" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/multipoolStats.log" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="MaxBackupIndex" value="3" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%t]: [%c{1}] 
+		%m%n" />
+		</layout>
+	</appender>
+
+	<appender name="use" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/multipoolStatsUse.log" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="MaxBackupIndex" value="2" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%t]: [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="perf" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/multipoolStatsPerf.log" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="MaxBackupIndex" value="2" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%t]: [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="multipoolRequestStats" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/multipoolStatsRequestStats.log" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="MaxBackupIndex" value="2" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%t]: [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="middlecoinRequestStats" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/middlecoinStatsRequestStats.log" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="MaxBackupIndex" value="2" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%t]: [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="waffleRequestStats" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/waffleStatsRequestStats.log" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="MaxBackupIndex" value="2" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%t]: [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="coinshiftRequestStats" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/coinshiftStatsRequestStats.log" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="MaxBackupIndex" value="2" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%t]: [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="coinsolverRequestStats" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/coinsolverStatsRequestStats.log" />
+		<param name="MaxFileSize" value="10000000" />
+		<param name="MaxBackupIndex" value="2" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p [%t]: [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="org.eclipse.persistence">
+		<level value="debug" />
+	</logger>
+
+	<logger name="org.springframework.orm">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.transaction">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.jdbc">
+		<level value="info" />
+	</logger>
+
+	<logger name="multipoolStatsUse">
+		<level value="debug" />
+		<appender-ref ref="use" />
+	</logger>
+
+	<logger name="multipoolStatsPerf">
+		<level value="debug" />
+		<appender-ref ref="perf" />
+	</logger>
+
+	<logger name="middlecoinRequestStats">
+		<level value="debug" />
+		<appender-ref ref="middlecoinRequestStats" />
+	</logger>
+
+	<logger name="waffleRequestStats" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="waffleRequestStats" />
+	</logger>
+
+	<logger name="coinshiftRequestStats" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="coinshiftRequestStats" />
+	</logger>
+
+	<logger name="coinsolverRequestStats" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="coinsolverRequestStats" />
+	</logger>
+
+	<logger name="multipoolRequestStats" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="multipoolRequestStats" />
+	</logger>
+
+	<root>
+		<priority value="debug" />
+		<appender-ref ref="console" />
+		<appender-ref ref="file" />
+	</root>
+
+</log4j:configuration>
