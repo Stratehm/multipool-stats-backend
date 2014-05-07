@@ -9,6 +9,7 @@ To build the package, you must have a JDK installed in version >= 7 and maven 3
 Some dependencies of this application are not in the maven central repository. You have to add it manually.
 
 These libraries are contained in the libToAddInM2 directory. (gwt-jsonmaker-1.2.1.jar and org.moxieapps.gwt.highcharts-1.6.0.jar)
+
 To "Mavenize" them, you have to copy the file in your local Maven repository which is in your home directory:
 
 
@@ -22,6 +23,7 @@ And copy the gwt-jsonmaker-1.2.1.jar file in the directory (create this director
 
 ##Packaging
 cd /directory/which/contain/pom.xmlFileOfTheProject
+
 mvn clean package
 
 The package is present in the target directory.
