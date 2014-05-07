@@ -7,13 +7,18 @@ To build the package, you must have a JDK installed in version >= 7 and maven 3
 ##Prepare the maven repository
 
 Some dependencies of this application are not in the maven central repository. You have to add it manually.
-This libraries are contained in the libToAddInM2 directory. (gwt-jsonmaker-1.2.1.jar and org.moxieapps.gwt.highcharts-1.6.0.jar)
+
+These libraries are contained in the libToAddInM2 directory. (gwt-jsonmaker-1.2.1.jar and org.moxieapps.gwt.highcharts-1.6.0.jar)
 To "Mavenize" them, you have to copy the file in your local Maven repository which is in your home directory:
+
+
 On Windows: c:\Users\<username>\.m2\repository
+
 On linux: /home/<username>/.m2/repository
 
 Then, copy the org.moxieapps.gwt.highcharts-1.6.0.jar file in the directory (create this directory if it does not exist): org/moxieapps/gwt/highcharts/1.6.0 and rename it to highcharts-1.6.0.jar
-copy the gwt-jsonmaker-1.2.1.jar file in the directory (create this directory if it does not exist): org/jsonmaker/gwt-jsonmaker/1.2.1 and rename it to gwt-jsonmaker-1.2.1.jar
+
+And copy the gwt-jsonmaker-1.2.1.jar file in the directory (create this directory if it does not exist): org/jsonmaker/gwt-jsonmaker/1.2.1 and rename it to gwt-jsonmaker-1.2.1.jar
 
 ##Packaging
 cd /directory/which/contain/pom.xmlFileOfTheProject
@@ -33,5 +38,5 @@ On a fresh Apache Tomcat installation, just copy the WAR file in the webapps dir
 http://127.0.0.1:8080/multipool-stats-backend-1.0.0-SNAPSHOT/
 
 The log file of the application will be stored in the /tmp directory. (On windows, this directory will be created on the same drive as the Tomcat insstallation. For example, c:\tmp)
-(It may be a good idea to make that configurable)
+(It may be a good idea to make that configurable in the future)
 
