@@ -42,3 +42,6 @@ http://127.0.0.1:8080/multipool-stats-backend-1.0.0-SNAPSHOT/
 The log file of the application will be stored in the /tmp directory. (On windows, this directory will be created on the same drive as the Tomcat insstallation. For example, c:\tmp)
 (It may be a good idea to make that configurable in the future)
 
+
+Oh, and if you want make a little donation, you are welcome :)
+BTC: 19wv8FQKv3NkwTdzBCQn1AGsb9ghqBPWXi
